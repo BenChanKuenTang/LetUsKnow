@@ -1,0 +1,23 @@
+//
+//  PublicHealth.pch
+//  PublicHealth
+//
+//  Created by Ben Chan on 25/9/15.
+//  Copyright © 2015 Ben Chan. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+#import "Config.h"
+#import "CommonFunction.h"
+#import "ProjManager.h"
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
+
+#endif /* PublicHealth_pch */
