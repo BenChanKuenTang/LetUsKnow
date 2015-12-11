@@ -18,12 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bX-Zq-izb">
+                                <rect key="frame" x="20" y="64" width="560" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let Us Know" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tX0-T8-a18">
+                                        <rect key="frame" x="10" y="40" width="96" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="7IP-lT-TzS">
+                                        <rect key="frame" x="470" y="10" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="g1Z-Ke-t2U"/>
+                                            <constraint firstAttribute="width" constant="80" id="gC3-E0-7n7"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7IP-lT-TzS" secondAttribute="trailing" constant="10" id="3cc-Yl-Oa1"/>
+                                    <constraint firstItem="7IP-lT-TzS" firstAttribute="centerY" secondItem="9bX-Zq-izb" secondAttribute="centerY" id="Cy9-sK-7Yi"/>
+                                    <constraint firstItem="tX0-T8-a18" firstAttribute="centerY" secondItem="9bX-Zq-izb" secondAttribute="centerY" id="Ola-tj-N1z"/>
+                                    <constraint firstItem="7IP-lT-TzS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tX0-T8-a18" secondAttribute="trailing" constant="50" id="Z6S-5H-k1h"/>
+                                    <constraint firstItem="tX0-T8-a18" firstAttribute="leading" secondItem="9bX-Zq-izb" secondAttribute="leading" constant="10" id="hf3-68-Xgh"/>
+                                    <constraint firstAttribute="height" constant="100" id="xeJ-QC-EfF"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nmm-mr-Aty">
-                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <rect key="frame" x="20" y="200" width="560" height="400"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListPostCell" rowHeight="100" id="anL-EH-VeK" customClass="ListPostCell">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="560" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="anL-EH-VeK" id="O9O-1X-zXv">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="99.5"/>
@@ -102,8 +129,17 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nmm-mr-Aty" secondAttribute="bottom" id="7FH-h2-QJ5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nmm-mr-Aty" secondAttribute="trailing" id="9di-n4-9wX"/>
                             <constraint firstItem="Nmm-mr-Aty" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JES-hj-FgB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9bX-Zq-izb" secondAttribute="trailing" id="UEm-wm-t0C"/>
+                            <constraint firstItem="9bX-Zq-izb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="WrP-wZ-bZq"/>
+                            <constraint firstItem="9bX-Zq-izb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZxF-lU-BsM"/>
                             <constraint firstItem="Nmm-mr-Aty" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ij1-bL-H1W"/>
+                            <constraint firstItem="Nmm-mr-Aty" firstAttribute="top" secondItem="9bX-Zq-izb" secondAttribute="bottom" constant="36" id="px7-4c-ETu"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ij1-bL-H1W"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -399,5 +435,6 @@
     </scenes>
     <resources>
         <image name="btn_add" width="45" height="45"/>
+        <image name="profile" width="64" height="64"/>
     </resources>
 </document>
